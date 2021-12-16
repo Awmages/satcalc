@@ -1,0 +1,23 @@
+{
+  "name": "satcalc",
+  "version": "0.0.1",
+  "description": "Satellite communication Javascript library",
+  "main": "dist/satcalc.cjs.js",
+  "module": "dist/satcalc.esm.js",
+  "browser": "dist/satcalc.umd.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "node src/index",
+    "pretest": "npm run build"
+  },
+  "author": "Alex Mages <alemages@gmail.com>",
+  "license": "GPL-3.0 License",
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "rollup": "^2.61.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}

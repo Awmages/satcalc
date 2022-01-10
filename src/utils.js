@@ -1,4 +1,4 @@
-import { data } from './tleTest.js';
+// import { data } from './tleTest.js';
 
 export function getRadToDeg(rads) {
   return rads * (180 / Math.PI);
@@ -20,9 +20,8 @@ export function getTleJsonParser() {
 }
 
 //converts TLE Line1 from string to array of props needed, formatted to work with NASA TLE API
-export function getTleLine1() {
-  //line1 is temp here, import when ready
-  let line1 = data[0].member[0].line1;
+//Provide json object as seen in test/tleTest.js (pulled from NASA TLE API)
+export function getTleLine1(line1) {
   let line1Split = line1
     .replace(/,/g, '')
     .replace(/\s+/g, ' ')
@@ -61,9 +60,9 @@ export function getTleLine1() {
   };
 }
 
-export function getTleLine2() {
-  //line2 is temp here, import when ready
-  let line2 = data[0].member[0].line2;
+//converts TLE Line1 from string to array of props needed, formatted to work with NASA TLE API
+//Provide json object as seen in test/tleTest.js (pulled from NASA TLE API)
+export function getTleLine2(line2) {
   let line2Split = line2
     .replace(/,/g, '')
     .replace(/\s+/g, ' ')
